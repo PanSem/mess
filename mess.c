@@ -32,6 +32,12 @@ struct edges {
 
 struct edges edg;
 
+struct info {
+  char* filename;
+};
+
+struct info in;
+
 /* Get window size */
 
 COORD getWindowSize() {
@@ -167,6 +173,23 @@ void goToXY(int x, int y) {
   SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
+void statusBar() {
+  if(cur.y>edg.endFile+1) {
+    return;
+  }
+
+  char a[5];
+
+  itoa(edg.endFile, a, 4);
+
+  cur.x = 0;
+  cur.y = edg.endFile+1;
+
+  goToXY(cur.x, cur.y);
+  printf("[Filename : %s] - lines : %d", in.filename, edg.endFile);
+  goToXY(cur.x, --cur.y);
+}
+
 /* Init cursor and window size */
 
 void initCursorCoor() {
@@ -177,6 +200,8 @@ void initCursorCoor() {
 
   edg.x = coor.X;
   edg.endFile = 0;
+
+  in.filename = NULL;
 }
 
 /* Read key */
@@ -192,6 +217,7 @@ void readKey() {
       break;
     case ARROW_DOWN: //One line down
       if(cur.y==edg.endFile) { //If end of file have been reached stop
+        statusBar();
         break;
       }
       goToXY(cur.x, ++cur.y);
@@ -249,6 +275,9 @@ void displayFile(char* file) {
   char * line = NULL;
   size_t len = 0;
   ssize_t read;
+
+  in.filename = malloc(sizeof(file));
+  in.filename = file;
 
   goToXY(0, 0); //Go to start
 
