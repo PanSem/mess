@@ -178,10 +178,6 @@ void statusBar() {
     return;
   }
 
-  char a[5];
-
-  itoa(edg.endFile, a, 4);
-
   cur.x = 0;
   cur.y = edg.endFile+1;
 
