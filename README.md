@@ -11,7 +11,7 @@ Mess is a simple implementation of less for Windows.
 
 ### Download mess from:
 * If you want to build it your shelf just clone the project and run make
-* Just download zip form files.
+* Just download zip form file
 
 ## Usage
 
