@@ -2,7 +2,7 @@
 
 Mess is a simple implementation of less for Windows.
 
-![alt text](https://github.com/PanSem/onedrivecli/blob/master/ps.png)
+![alt text](https://github.com/PanSem/mess/blob/master/ps.png)
 
 ## Installation
 
@@ -11,7 +11,7 @@ Mess is a simple implementation of less for Windows.
 
 ### Download mess from:
 * If you want to build it your shelf just clone the project and run make
-* Just copy the following in a powershell / ready for use: iex (new-object net.webclient).DownloadFile("mess.zip",)
+* Just copy the following in a powershell / ready for use: iex (new-object net.webclient).DownloadFile("mess.zip", "https://github.com/PanSem/mess/blob/master/file/mess.zip")
 
 ## Usage
 
