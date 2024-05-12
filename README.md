@@ -10,14 +10,14 @@ Mess is a simple implementation of less for Windows.
 * Windows 7, 8.1, 10
 
 ### Download mess from:
-* If you want to build it your shelf just clone the project and run make
-* Just download zip form file
+* If you want to build it yourself, simply clone the project and run the ‘make’ command.
+* Just download the zip from the folder named 'file'
 
 ## Usage
 
-* Press key arrows to navigate the file
-* Press HOME to go to the start of the file
-* Press END to go to the end of the file
+* Press key arrows to navigate
+* Press HOME to go to the start
+* Press END to go to the end
 * Press q to quit
 
 * You are ready to go.
